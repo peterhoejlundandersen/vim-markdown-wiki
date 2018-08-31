@@ -194,7 +194,8 @@ function! MdwiGotoLink()
       exec "normal! a(".relativepath.")"
       exec ":w"
       "Write title to the new document
-      let strCmd = 'normal!\ a'.escape(word, ' \').'\<esc>yypv$r=o\<cr>'
+      "Changed the printing, so it prints a tex document template (saved a "p latex in my register)
+      let strCmd = 'normal!\ a'.'\<esc>"lP\<cr>'
     endif
 
     let link = MdwiFilePath(relativepath)
