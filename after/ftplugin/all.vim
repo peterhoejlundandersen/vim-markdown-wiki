@@ -87,7 +87,9 @@ function! MdwiWordFilename(word)
     let word = substitute(word, '\s', '-', 'g')
 
     let cur_file_name = bufname("%")
-    let extension = fnamemodify(cur_file_name, ":e")
+    "let extension = fnamemodify(cur_file_name, ":e")
+    "=== I've created this
+    let extension = "tex"
     let file_name = word.".".extension
   endif
   return file_name
